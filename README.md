@@ -1,51 +1,77 @@
-# Phylogenetic Tree Analysis with Genetic Algorithm
- MSc projects on Metahueristics Algorithms
- 
-**Instruction for the reproduction of the experiment:**
+# Phylogenetic Tree Analysis with Genetic Algorithms
 
-Required installed Software:
-Python 3.4 or above
-Required installed packages:
-Biopython
-Bio.Phylo
-Numpy
-Matplotlib
-Scipy
-Fuzzywuzzy
-Pandas
+## Overview
 
+This project explores the application of Genetic Algorithms (GA) to construct and analyze phylogenetic trees. It was developed as part of my MSc research on metaheuristic approaches for bioinformatics problems. The goal is to automate the inference of evolutionary relationships among species using optimized tree structures.
 
-**Database Download Link:**
-http://www.ncbi.nlm.nih.gov/Entrez
-The output returned by the Entrez Programming Utilities is typically in XML
-format. To parse such output, you have several options:
-1. Use Bio.Entrez’s parser to parse the XML output into a Python object;
-2. Use the DOM (Document Object Model) parser in Python’s standard library;
-3. Use the SAX (Simple API for XML) parser in Python’s standard library;
-4. Read the XML output as raw text, and parse it by string searching and
-manipulation.
+## Requirements
 
+### Software
+- Python 3.4 or above
 
-**Genome database consists of following dataset—**
-Assembly genome assembly information
-BioCollections museum, herbaria, and other biorepository collections
-BioProject biological projects providing data to NCBI
-BioSample descriptions of biological source materials
-Clone genomic and cDNA clones
-dbVar genome structural variation studies
-Genome genome sequencing projects by organism
-GSS genome survey sequences
-Nucleotide DNA and RNA sequences
-Probe sequence-based probes and primers
-SNP short genetic variations
-SRA high-throughput DNA and RNA sequence read archive
-Taxonomy taxonomic classification and nomenclature catalog
+### Python Packages
+Make sure the following packages are installed:
 
+- biopython
+- numpy
+- matplotlib
+- scipy
+- fuzzywuzzy
+- pandas
 
+You can install them using:
 
-**NB:** You need to change the code on exact point to read various dataset from
-‘Genome’ database. Also need to change parameters to get the result variation.
-Modular programming is used to deal with such a huge dataset. Genetic
-Algorithm performs the best when it’s parameters are well tuned. So, there may
-be some deflection in reproduction of experimental results with the actual
-results mention in the paper.
+```bash
+pip install biopython numpy matplotlib scipy fuzzywuzzy pandas
+```
+
+## Data Source
+
+The genome data is obtained from NCBI:
+
+🔗 [NCBI Entrez Programming Utilities](https://www.ncbi.nlm.nih.gov/Entrez)
+
+NCBI data is typically in XML format. You may parse it using:
+1. `Bio.Entrez` module
+2. Python's built-in `xml.dom` or `xml.sax`
+3. Manual string-based parsing (not recommended)
+
+### Genome database includes:
+- Assembly
+- BioCollections
+- BioProject
+- BioSample
+- Clone
+- dbVar
+- Genome
+- GSS
+- Nucleotide
+- Probe
+- SNP
+- SRA
+- Taxonomy
+
+## Notes
+
+- You may need to modify the code to read specific datasets from the Genome database.
+- Parameter tuning is critical for optimal GA performance.
+- Modular design supports easy changes to datasets and GA settings.
+- Due to the stochastic nature of GA, reproduced results may slightly differ from those reported in the original thesis.
+
+## Citation
+
+If you use this work, please cite:
+
+```
+S. M. Rafiuddin, "Estimation of Phylogenetic Tree using Gene Sequencing Data,"
+2019 4th International Conference on Electrical Information and Communication Technology (EICT),
+Khulna, Bangladesh, 2019, pp. 1-6, doi:10.1109/EICT48899.2019.9068849.
+```
+
+## License
+
+This project is open-sourced under the MIT License.
+
+## Author
+
+S. M. Rafiuddin (2020)
